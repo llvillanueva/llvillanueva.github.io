@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - llvillanueva
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - llvillanueva/Numerical-Methods-I_ESP_ICTP-Diploma-Program
+  - llvillanueva/Geophysical-Fluid-Dynamics_ESP_ICTP-Diploma-Program
+  - llvillanueva/Apphy-155-codes
