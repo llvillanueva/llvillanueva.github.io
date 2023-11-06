@@ -1,26 +1,42 @@
 ---
 layout: about
-title: about
+title: .about.
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='https://www.ictp.it/'>ICTP</a> <a href='https://www.ictp.it/esp'>(Earth System Physics)</a> Postgraduate Diploma Student
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>📍 Trieste, Italy</p>
+    <p>🏠 Manila, Philippines</p>
+    
 
 news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
+latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+# Also, I sometimes log <a href='https://letterboxd.com/wronskian/'>the film I watched</a>. Lastly, as my friend suggested, I'm planning to <a href='https://www.instagram.com/llvftgrp/'>upload here</a> my shots and take a look how I see the world.  
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Mabuhay! I am Lloydie from the Philippines.
+<div style="text-align: justify"> 
+<p>I am a <strong>Mathematical Physicist</strong> turned <strong>Data Scientist</strong>, and currently exploring the interdisplinary field of <strong>Earth System Science</strong>. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<p>I earned my B.Sc. Physics degree as a <a href='https://sei.dost.gov.ph/index.php/programs-and-projects/scholarships/undergraduate-scholarships#s-t-undergraduate-scholarships'>DOST RA 7687 Scholar</a> from <a href='http://nip.upd.edu.ph/'>National Institute of physics</a> at the <a href = 'https://upd.edu.ph/'>University of the Philipines, Diliman</a> under the supervision of Prof. <a href='http://nip.upd.edu.ph/profiles/eric-a-galapon/'>Eric Galapon</a> in his <a href= 'https://quant-math.org/wp/'>QuantMath Subgroup</a>. I continue working with Prof. Galapon through my M. Sc. Physics degree while being employed as instructor at the same institution. His passion towards understanding quantum systems led him to develop his so-called <strong>finite-part integration</strong>, which is the focus of my research for my B.Sc. and M.Sc. degree. In our <a href='https://pubs.aip.org/aip/jmp/article-abstract/62/4/043505/235708/Finite-part-integration-in-the-presence-of'>published paper</a>, we elaborated the method of finite-part integration and extended its applicability. 
+
+<p>This year, I decided to leave the academe and started working as a data scientist at the <a href='https://www.securitybank.com/'>Security Bank</a> in the Philippines. Using supervised machine learning, I made a churn model of deposit customers for bank retention program and a propensity model of credit card customers for the bank cross-selling initiative. Life indeed unpredictable, my passion in science brings me here in Trieste, Italy to finally realized my childhood dreams. 
+
+<p>Currently, I am a postgraduate diploma student here at <a href='https://www.ictp.it/'>The Abdus Salam International Centre for Theoretical Physics</a> for a year and I will be taught and mentored by <a href='https://www.ictp.it/esp'>notable scientist of Earth System Physics</a>. 
+
+<p>Besides research, I enjoy freediving🤿, watching film🍿, and photography📷. If you have plans to go to the Philippines, freediving is a must try and strongly recommend my freediving community <a href='https://www.instagram.com/katawfreediving/'>KATAW</a>. 
+
+<p>Here, have a look at my <a href='/cv/'>cv</a>.
+
+<p>(Last edited: 5 November 2023)
+<p>
+<img src="assets/img/225.jpg" alt="Barobo" class="center" style="max-width:800px;">
+<div style="text-align: right"> 
+<strong>Barobo, Surigao Del Sur</strong> (my friend's hometown)
