@@ -7,7 +7,6 @@ description:
 nav: true
 nav_order: 5
 ---
-
 ## GitHub users
 
 {% if site.data.repositories.github_users %}
