@@ -31,7 +31,7 @@ Mabuhay! I am Lloydie from the Philippines.
 
 <p>Currently, I am a postgraduate diploma student here at <a href='https://www.ictp.it/'>The Abdus Salam International Centre for Theoretical Physics</a> for a year, and I will be taught and mentored by <a href='https://www.ictp.it/esp'>notable scientist of Earth System Physics</a>. 
 
-<p>Besides research, I enjoy freediving🤿, watching film🍿, and photography📷. So if I'm not in the school or laboratory, I'll be just in the ocean freediving, in my room/cinema watching movies, or walking around taking photos of what I want you to see. 
+<p>Besides research, I enjoy freediving🤿, watching film🍿, and photography📷. So if I'm not in the school or laboratory, I'll just be in the ocean freediving, in my room/cinema watching movies, or walking around taking photos of what I want you to see. 
 
 <p>But if you are more interested on my detailed experience, have a look at my <a href='/cv/'>cv</a>.
 
