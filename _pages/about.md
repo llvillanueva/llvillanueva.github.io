@@ -2,14 +2,14 @@
 layout: about
 title: .about.
 permalink: /
-subtitle: <a href='https://www.ictp.it/'>ICTP</a> <a href='https://www.ictp.it/esp'>(Earth System Physics)</a> Postgraduate Diploma Student
-
+subtitle: PhD student at <a href='https://www.chalmers.se/en/'>Chalmers University of Technology</a>
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>📍 Trieste, Italy</p>
+    <p>📍 Göteborg, Sweden</p>
+    <p>🎓 Trieste, Italy</p>
     <p>🏠 Manila, Philippines</p>
     
 
@@ -22,20 +22,17 @@ social: true  # includes social icons at the bottom of the page
 
 Mabuhay! I am Lloydie from the Philippines.
 <div style="text-align: justify"> 
-<p>I am a <strong>Mathematical Physicist</strong> turned <strong>Data Scientist</strong>, and currently exploring the interdisplinary field of <strong>Earth System Science</strong>. 
+<p>I am a <strong>PhD student</strong> at <a href='https://www.chalmers.se/en/'> Chalmers University of Technology</a> under the supervision of Professor <a href='https://www.chalmers.se/en/persons/ickes/'> Luisa Ickes</a>. The goal of research is to improve the representation of Arctic clouds in the climate models.
 
+<p>Through the <a href ='https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme'> postgraduate diploma programme </a> (highly recommended program!!!) of <a href='https://www.ictp.it/'>The Abdus Salam International Centre for Theoretical Physics</a> , I was introduced to the field of atmospheric science and was trained by <a href='https://www.ictp.it/esp'>notable scientist of Earth System Physics</a>. I was fortunate to work with Professor<a href='https://users.ictp.it/~tompkins/'> Adrian Tompkins</a>, where we characterized the cold pools formed over land and ocean using weather station data, specifically the <a href='https://www.arm.gov/capabilities/observatories/twp'> ARM - Tropical Western Pacific</a> dataset.
 
-<p>I earned my B.Sc. Physics degree as a <a href='https://sei.dost.gov.ph/index.php/programs-and-projects/scholarships/undergraduate-scholarships#s-t-undergraduate-scholarships'>DOST RA 7687 Scholar</a> from <a href='http://nip.upd.edu.ph/'>National Institute of physics</a> at the <a href = 'https://upd.edu.ph/'>University of the Philipines, Diliman</a> under the supervision of <a href='http://nip.upd.edu.ph/profiles/eric-a-galapon/'>Prof. Eric Galapon</a> in his <a href= 'https://quant-math.org/wp/'>QuantMath Subgroup</a>. I continue working with Prof. Galapon through my M. Sc. Physics degree while being employed as <a href='http://nip.upd.edu.ph/profiles/lloyd-l-villanueva/'>instructor at the same institution</a>. His passion towards understanding divergences/infinities led him to develop his so-called <strong>finite-part integration</strong>, which is the focus of my research for my B.Sc. and M.Sc. degree. In our <a href='https://pubs.aip.org/aip/jmp/article-abstract/62/4/043505/235708/Finite-part-integration-in-the-presence-of'>published paper</a>, we elaborated the method of finite-part integration and extended its applicability. 
-
-<p>At the start of the year, I decided to leave the academe and started working as a data scientist at the <a href='https://www.securitybank.com/'>Security Bank</a> in the Philippines. Using supervised machine learning, I made a churn model of deposit customers for bank retention program and started a propensity model of credit card customers for the bank cross-selling initiative. But life indeed unpredictable, my passion in science brings me here in Trieste, Italy to finally realized my childhood dreams. 
-
-<p>Currently, I am a postgraduate diploma student here at <a href='https://www.ictp.it/'>The Abdus Salam International Centre for Theoretical Physics</a> for a year, and I will be taught and mentored by <a href='https://www.ictp.it/esp'>notable scientist of Earth System Physics</a>. 
+Before diving into this field, I was trained in the field of Mathematical Physics under the supervision of Professor<a href='http://nip.upd.edu.ph/profiles/eric-a-galapon/'> Eric Galapon</a> in his <a href= 'https://quant-math.org/wp/'>QuantMath Subgroup</a>, where we <a href='https://pubs.aip.org/aip/jmp/article-abstract/62/4/043505/235708/Finite-part-integration-in-the-presence-of'>elaborated the method of finite-part integration and extended its applicability</a>.
 
 <p>Besides research, I enjoy freediving🤿, watching film🍿, and photography📷. So if I'm not in the school or laboratory, I'll just be in the ocean freediving, in my room/cinema watching movies, or walking around taking photos of what I want you to see. 
 
 <p>But if you are more interested on my detailed experience, have a look at my <a href='/cv/'>cv</a>.
 
-<p>(Last edited: 5 November 2023)
+<p>(Last edited: 22 November 2024)
 <p>
 <img src="assets/img/225.jpg" alt="Barobo" class="center" style="max-width:800px;">
 <div style="text-align: right"> 
