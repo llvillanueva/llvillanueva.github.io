@@ -22,15 +22,16 @@ social: true  # includes social icons at the bottom of the page
 
 Mabuhay! I am Lloydie from the Philippines.
 <div style="text-align: justify"> 
-<p>I am a <strong>PhD student</strong> at <a href='https://www.chalmers.se/en/'> Chalmers University of Technology</a> under the supervision of Professor <a href='https://www.chalmers.se/en/persons/ickes/'> Luisa Ickes</a>. The goal of research is to improve the representation of Arctic clouds in the climate models.
+  <p>I am a <strong>PhD student</strong> at <a href='https://www.chalmers.se/en/'>Chalmers University of Technology</a>, under the supervision of Professor <a href='https://www.chalmers.se/en/persons/ickes/'>Luisa Ickes</a>. The goal of my research is to improve the representation of Arctic clouds in climate models.</p>
 
-<p>Through the <a href ='https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme'> postgraduate diploma programme </a> (highly recommended program!!!) of <a href='https://www.ictp.it/'>The Abdus Salam International Centre for Theoretical Physics</a> , I was introduced to the field of atmospheric science and was trained by <a href='https://www.ictp.it/esp'>notable scientist of Earth System Physics</a>. I was fortunate to work with Professor<a href='https://users.ictp.it/~tompkins/'> Adrian Tompkins</a>, where we characterized the cold pools formed over land and ocean using weather station data, specifically the <a href='https://www.arm.gov/capabilities/observatories/twp'> ARM - Tropical Western Pacific</a> dataset.
+  <p>Through the <a href='https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme'>postgraduate diploma programme</a> (a highly recommended program!!!) at <a href='https://www.ictp.it/'>The Abdus Salam International Centre for Theoretical Physics</a>, I was introduced to the field of atmospheric science and trained by <a href='https://www.ictp.it/esp'>notable scientists of Earth System Physics</a>. I was fortunate to work with Professor <a href='https://users.ictp.it/~tompkins/'>Adrian Tompkins</a>, where we characterized cold pools formed over land and ocean using weather station data, specifically the <a href='https://www.arm.gov/capabilities/observatories/twp'>ARM – Tropical Western Pacific</a> dataset.</p>
 
-Before diving into this field, I was trained in the field of Mathematical Physics under the supervision of Professor<a href='http://nip.upd.edu.ph/profiles/eric-a-galapon/'> Eric Galapon</a> in his <a href= 'https://quant-math.org/wp/'>QuantMath Subgroup</a>, where we <a href='https://pubs.aip.org/aip/jmp/article-abstract/62/4/043505/235708/Finite-part-integration-in-the-presence-of'>elaborated the method of finite-part integration and extended its applicability</a>.
+  <p>Before diving into this field, I was trained in Mathematical Physics under the supervision of Professor <a href='http://nip.upd.edu.ph/profiles/eric-a-galapon/'>Eric Galapon</a> in his <a href='https://quant-math.org/wp/'>QuantMath Subgroup</a>, where we <a href='https://pubs.aip.org/aip/jmp/article-abstract/62/4/043505/235708/Finite-part-integration-in-the-presence-of'>elaborated on the method of finite-part integration and extended its applicability</a>.</p>
 
-<p>Besides research, I enjoy freediving🤿, watching film🍿, and photography📷. So if I'm not in the school or laboratory, I'll just be in the ocean freediving, in my room/cinema watching movies, or walking around taking photos of what I want you to see. 
+  <p>Besides research, I enjoy freediving 🤿, watching films 🍿, and photography 📷. So if I'm not in school or the lab, I'm probably in the ocean freediving, in my room or at the cinema watching movies, or out walking around taking photos of what I want you to see.</p>
 
-<p>But if you are more interested on my detailed experience, have a look at my <a href='/cv/'>cv</a>.
+  <p>If you're more interested in my detailed experience, have a look at my <a href='/cv/'>CV</a>.</p>
+</div>
 
 <p>(Last edited: 22 November 2024)
 <p>
