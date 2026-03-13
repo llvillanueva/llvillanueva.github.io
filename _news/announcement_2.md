@@ -1,32 +1,58 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: How to post news on this site
+date: 2026-03-13 08:00:00+0100
 inline: false
 related_posts: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+News items on this site live in the `_news/` folder. Each item is a Markdown file with a small YAML front-matter block at the top. Here is a quick guide.
 
-***
+---
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+### Short (inline) announcement
 
-#### Hipster list
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
+Create a file like `_news/announcement_N.md` with the following front matter:
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+```yaml
+---
+layout: post
+date: YYYY-MM-DD HH:MM:SS±HHMM
+inline: true
+related_posts: false
+---
 
-***
+Your short announcement text here.
+```
 
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
+Inline items appear as a single line in the *News* section of the home page.
 
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
+---
 
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+### Long announcement (with its own page)
+
+Set `inline: false` and add a `title`:
+
+```yaml
+---
+layout: post
+title: My announcement title
+date: YYYY-MM-DD HH:MM:SS±HHMM
+inline: false
+related_posts: false
+---
+
+Full Markdown content goes here. You can use **bold**, _italic_, lists, images, code blocks, and more.
+```
+
+Long announcements get their own page that visitors can navigate to.
+
+---
+
+### Tips
+
+- File names can be anything; a good convention is `announcement_N.md` or a short slug like `my-event.md`.
+- The `date` field controls the order in which news items are listed (newest first).
+- Markdown, HTML, emoji `:sparkles:`, and LaTeX math are all supported.
+- The home page shows the most recent **{{ site.announcements.limit }}** items (configured via `announcements.limit` in `_config.yml`).
+
