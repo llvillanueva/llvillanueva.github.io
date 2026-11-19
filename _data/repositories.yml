@@ -1,9 +1,20 @@
+# Repository cards on the .sink. page (keep it to your ~4 most important).
+# github_users: your GitHub username (used for the "All repositories on GitHub" link)
+# github_repos: one entry per card; description and language are shown on the card.
+
 github_users:
   - llvillanueva
 
 github_repos:
-  - llvillanueva/NM2-ESP_2024
-  - llvillanueva/Numerical-Methods-I_ESP_ICTP-Diploma-Program
-  - llvillanueva/ScientificPython_diploma24
-  - llvillanueva/Geophysical-Fluid-Dynamics_ESP_ICTP-Diploma-Program
-  - llvillanueva/Apphy-155-codes
+  - repo: llvillanueva/MLC_classification_algorithm
+    description: Classifies multilayer clouds (MLCs) from radiosonde and cloud radar data.
+    language: Python
+  - repo: llvillanueva/NM2-ESP_2024
+    description: Numerical Methods II course material, ICTP Diploma in Earth System Physics (2024).
+    language: Jupyter Notebook
+  - repo: llvillanueva/Numerical-Methods-I_ESP_ICTP-Diploma-Program
+    description: Numerical Methods I course material, ICTP Diploma in Earth System Physics.
+    language: Fortran
+  - repo: llvillanueva/ScientificPython_diploma24
+    description: Scientific Python course material, ICTP Diploma in Earth System Physics (2024).
+    language: Jupyter Notebook

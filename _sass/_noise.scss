@@ -1,0 +1,189 @@
+/*******************************************************************************
+ * Styles for the .noise. blog page (blog/index.html)
+ ******************************************************************************/
+
+.noise {
+  // Hashtag pills
+  .noise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 2rem;
+    padding: 0 0 2rem;
+    list-style: none;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.85rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--global-text-color);
+      transition: border-color 0.15s, color 0.15s;
+
+      i {
+        color: var(--global-theme-color);
+      }
+
+      &:hover {
+        border-color: var(--global-theme-color);
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Pinned posts
+  .noise-featured {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .noise-card {
+    display: block;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--global-divider-color);
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 8px;
+    background: var(--global-card-bg-color);
+    color: var(--global-text-color);
+    transition: transform 0.15s;
+
+    &:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .noise-pin {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--global-theme-color);
+    }
+
+    h3 {
+      margin: 0.4rem 0;
+      font-size: 1.15rem;
+    }
+
+    p {
+      margin: 0 0 0.6rem;
+      font-size: 0.9rem;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  // Post list
+  .noise-list {
+    margin: 0 0 2.5rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .noise-item {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &.has-thumb {
+      grid-template-columns: 4.5rem 1fr 9rem;
+    }
+
+    &:first-child {
+      padding-top: 0.5rem;
+    }
+  }
+
+  .noise-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.2rem;
+    line-height: 1.1;
+
+    .day {
+      font-size: 1.9rem;
+      font-weight: 300;
+      color: var(--global-theme-color);
+    }
+
+    .month {
+      margin-top: 0.15rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--global-text-color-light);
+      white-space: nowrap;
+    }
+  }
+
+  .noise-body {
+    min-width: 0;
+
+    h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.3rem;
+
+      a {
+        color: var(--global-text-color);
+
+        &:hover {
+          color: var(--global-theme-color);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .noise-desc {
+      margin: 0 0 0.5rem;
+      color: var(--global-text-color-light);
+    }
+
+    .noise-meta {
+      margin: 0;
+      font-size: 0.82rem;
+      color: var(--global-text-color-light);
+    }
+
+    .noise-tag {
+      margin-left: 0.5rem;
+      color: var(--global-theme-color);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .noise-thumb img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .noise-empty {
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--global-text-color-light);
+  }
+
+  @media (max-width: 576px) {
+    .noise-item,
+    .noise-item.has-thumb {
+      grid-template-columns: 3.5rem 1fr;
+    }
+
+    .noise-thumb {
+      grid-column: 2;
+    }
+  }
+}

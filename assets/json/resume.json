@@ -1,103 +1,172 @@
 {
   "basics": {
     "name": "Lloyd Villanueva",
-    "label": "Mathematical Physicist turned Data Scientist",
+    "label": "Doctoral student in Radio and Space Science",
     "image": "",
-    "email": "lvillnu@ictp.it",
-    "phone": "(+39) 351 5202827",
-    "url": "",
-    "summary": "Mathematical Physicist turned Data Scientist, with future aspiration to do a doctorate degree in Earth systems. He envision to have a novel contribution to the field using his rigorous training in mathematical physics and experience in data science.",
+    "email": "lloyd.villanueva@chalmers.se",
+    "url": "https://llvillanueva.github.io",
+    "summary": "Doctoral student at Chalmers University of Technology, studying Arctic clouds and their role in climate models. For a change of pace, I sometimes shift my focus to convective cold pools in lower latitudes. With a background in mathematical physics and data science, I aim to contribute new insights to atmospheric science and climate research.",
     "location": {
-      "address": "s",
-      "postalCode": "",
-      "city": "Trieste",
-      "countryCode": "IT",
-      "region": ""
+      "city": "Gothenburg",
+      "countryCode": "SE"
     },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "llvillanueva",
-        "url": "https://twitter.com/llvillanuevaph"
-      }
-    ]
+    "profiles": []
   },
+  "education": [
+    {
+      "institution": "Chalmers University of Technology, Gothenburg, Sweden",
+      "url": "https://www.chalmers.se/en/",
+      "area": "Radio and Space Science · expected Sept 2028",
+      "studyType": "PhD",
+      "startDate": "2024-10-01",
+      "endDate": "",
+      "courses": [
+        "Supervisor: Luisa Ickes"
+      ]
+    },
+    {
+      "institution": "The Abdus Salam International Centre for Theoretical Physics, Trieste, Italy",
+      "url": "https://www.ictp.it/",
+      "area": "Earth System Physics · best performing student",
+      "studyType": "Postgraduate Diploma",
+      "startDate": "2023-09-01",
+      "endDate": "2024-08-31",
+      "courses": [
+        "Thesis: Novel cold pool detection algorithm: characterizing cold pools formed over land and ocean using weather stations in Darwin, Australia",
+        "Supervisor: Adrian Tompkins"
+      ]
+    },
+    {
+      "institution": "University of the Philippines Diliman, Quezon City, Philippines",
+      "url": "http://nip.upd.edu.ph/",
+      "area": "Physics",
+      "studyType": "M.Sc.",
+      "startDate": "2019-08-01",
+      "endDate": "2021-07-01",
+      "courses": [
+        "Thesis: Reduction Formulas of the Kampé de Fériet Function Arising from the Method of Finite-part Integration",
+        "Supervisor: Eric Galapon"
+      ]
+    },
+    {
+      "institution": "University of the Philippines Diliman, Quezon City, Philippines",
+      "url": "http://nip.upd.edu.ph/",
+      "area": "Physics · cum laude",
+      "studyType": "B.Sc.",
+      "startDate": "2015-08-01",
+      "endDate": "2019-06-01",
+      "courses": [
+        "Thesis: Finite-Part Integration in the Presence of Poles and Branch Points and its Application to Ordinary Hypergeometric Function"
+      ]
+    }
+  ],
   "work": [
     {
-      "name": "Security Bank Corporation",
+      "name": "Chalmers University of Technology, Gothenburg, Sweden",
+      "position": "Teaching Assistant and Graduate Mentor",
+      "url": "https://www.chalmers.se/en/",
+      "startDate": "2024-10-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Courses: SEE110 Climate Modeling, LEU483 C Programming",
+        "Supervised student project: Characteristics of Multilayer Clouds from the Tropics to the Polar Regions (Karl Müdsam)"
+      ]
+    },
+    {
+      "name": "Security Bank Corporation, Makati City, Philippines",
       "position": "Data Scientist",
-      "url": "",
+      "url": "https://www.securitybank.com/",
       "startDate": "2023-01-16",
       "endDate": "2023-08-30",
-      "summary": "Works with various business units to discover and develop models, products, or solutions that help the bank achieve its objectives such as improving the operations of the bank, reducing business costs, or increasing the bank’s revenues.",
+      "summary": "",
       "highlights": [
-        
+        "Developed a churn model of deposit customers for the bank's retention strategies and a propensity model of credit card customers for cross-selling.",
+        "Built a pipeline that validates bank data between on-premise and cloud databases."
       ]
     },
     {
       "name": "National Institute of Physics, University of the Philippines Diliman",
       "position": "Instructor",
-      "url": "http://nip.upd.edu.ph/profiles/lloyd-l-villanueva/",
+      "url": "http://nip.upd.edu.ph/",
       "startDate": "2019-08-01",
       "endDate": "2023-01-13",
-      "summary": "Handled lecture and/or laboratory classes on the following topics: classical mechanics, electrodynamics, thermodynamics, optics, and numerical methods",
+      "summary": "",
       "highlights": [
-    
+        "Courses: Mechanics (Physics 71), Electromagnetism (Physics 72), Fundamental Physics Laboratory (Physics 71.1, 72.1, 106.1), Computer Methods in Physics (Applied Physics 155, laboratory).",
+        "Head of the Institute's socials committee (AY 2020–2021) and its representative on the college-level committee."
       ]
     }
   ],
-  "volunteer": [],
-  "education": [
+  "projects": [
     {
-      "institution": "The Abdus Salam International Centre for Theoretical Physics",
-      "url": "https://www.ictp.it/",
-      "area": "Earth System Physics",
-      "studyType": "Postgraduate Diploma (expected)",
+      "name": "Network for Observation of Volcanic and Atmospheric Change (NOVAC)",
+      "url": "",
+      "startDate": "2026-03-01",
+      "endDate": "",
+      "summary": "Post-processing volcanic gas emission data from scanning mini-DOAS instruments.",
+      "highlights": []
+    },
+    {
+      "name": "Cold pool project (with Adrian Tompkins, ICTP)",
+      "url": "",
       "startDate": "2023-09-01",
       "endDate": "2024-08-31",
-      "score": "",
-      "courses": [
-        
-      ]
-    },
+      "summary": "Characterized cold pools using ARM Tropical Western Pacific weather station data.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
     {
-      "institution": "National Institute of Physics, University of the Philippines Diliman",
-      "url": "http://nip.upd.edu.ph/",
-      "area": "Physics",
-      "studyType": "M. Sc.",
-      "startDate": "2019-08-01",
-      "endDate": "2021-07-01",
-      "score": "",
-      "courses": [
-        
-      ]
-    },
-    {
-      "institution": "National Institute of Physics, University of the Philippines Diliman",
-      "url": "http://nip.upd.edu.ph/",
-      "area": "Physics",
-      "studyType": "B. Sc.",
-      "startDate": "2015-08-01",
-      "endDate": "2019-06-01",
-      "score": "",
-      "courses": [
-        
-      ]
+      "organization": "Omdena (Berlin local chapter)",
+      "position": "Junior Machine Learning Engineer",
+      "url": "https://omdena.com/",
+      "startDate": "2022-08-01",
+      "endDate": "2022-12-31",
+      "summary": "Estimating the CO2 footprint of common groceries: compiled and curated the project dataset.",
+      "highlights": []
     }
   ],
   "awards": [
     {
-      "title": "cum laude",
+      "title": "ICTP Postgraduate Diploma Programme scholarship",
+      "date": "2023",
+      "awarder": "The Abdus Salam International Centre for Theoretical Physics",
+      "summary": "2023–2024"
+    },
+    {
+      "title": "UP Employee/Faculty Study Privilege",
       "date": "2019",
-      "awarder": "University of the Philippines, Diliman",
-      "summary": ""
+      "awarder": "University of the Philippines",
+      "summary": "2019–2022"
+    },
+    {
+      "title": "DOST Science and Technology Scholarship (RA 7687)",
+      "date": "2014",
+      "awarder": "Department of Science and Technology, Philippines",
+      "summary": "2014–2019"
     }
   ],
-  "certificates": [],
-  "publications": [
-
+  "interests": [
+    {
+      "name": "Atmosphere & climate",
+      "keywords": ["Climate modeling", "Arctic climate system", "Aerosol–cloud–radiation interactions", "Convection dynamics", "Climate variability, change and extremes"]
+    },
+    {
+      "name": "Methods",
+      "keywords": ["Machine learning and AI", "Data science", "Complex analysis", "Asymptotics and perturbation methods"]
+    }
   ],
-  "skills": [],
+  "skills": [
+    {
+      "name": "Programming",
+      "keywords": ["Python", "Fortran", "Julia", "MATLAB", "Linux"]
+    },
+    {
+      "name": "Tools",
+      "keywords": ["Wolfram Mathematica", "LaTeX / TikZ", "MS Office"]
+    }
+  ],
   "languages": [
     {
       "language": "Filipino",
@@ -108,7 +177,7 @@
       "fluency": "Fluent"
     }
   ],
-  "interests": [],
-  "references": [],
-  "projects": []
+  "certificates": [],
+  "publications": [],
+  "references": []
 }

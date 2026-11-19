@@ -1,0 +1,228 @@
+/*******************************************************************************
+ * Shared look for .about. / .cv. / .sink. / .noise.
+ *   - page title:      light, accent-coloured ".name." + muted description
+ *   - section labels:  small uppercase accent text with an accent underline
+ *   - timelines:       muted date | dot on a line | entry
+ * Page-specific bits live in _about.scss, _sink.scss and _noise.scss.
+ ******************************************************************************/
+
+// ── Page title (page.html, cv.html, blog index) ─────────────────────────────
+.post-header {
+  .post-title {
+    font-size: 2.6rem;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    color: var(--global-theme-color);
+  }
+
+  .post-description {
+    margin-bottom: 2rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// ── CV page ─────────────────────────────────────────────────────────────────
+.cv {
+  // Sections: flat, no boxed cards
+  .card {
+    margin-top: 2.75rem !important;
+    padding: 0 !important;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &:first-of-type {
+      margin-top: 0.5rem !important;
+    }
+  }
+
+  // Section names look like the .sink. / .about. labels
+  .card-title {
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--global-theme-color);
+    font-size: 0.8rem;
+    font-weight: 600 !important;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+  }
+
+  .list-group-item {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  // Timeline rows: date | line + dot | entry
+  .list-group-flush > .list-group-item > .row {
+    flex-wrap: nowrap;
+    margin: 0;
+
+    > div:first-child {
+      flex: 0 0 7rem;
+      max-width: 7rem;
+      width: auto !important;
+      padding: 0.55rem 1.25rem 0 0;
+      text-align: right !important;
+    }
+
+    > div:last-child {
+      position: relative;
+      flex: 1 1 auto;
+      max-width: none;
+      margin-top: 0 !important;
+      padding: 0.4rem 0 1.4rem 1.25rem;
+      border-left: 2px solid var(--global-divider-color);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -6px;
+        top: 0.85rem;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--global-bg-color);
+        border: 2px solid var(--global-theme-color);
+      }
+    }
+  }
+
+  .list-group-flush > .list-group-item:last-child > .row > div:last-child {
+    padding-bottom: 0.4rem;
+  }
+
+  // Dates: quiet text instead of coloured badges
+  .card .list-group-item .badge,
+  .badge {
+    display: inline;
+    min-width: 0 !important;
+    padding: 0;
+    background: transparent !important;
+    color: var(--global-text-color-light) !important;
+    font-size: 0.75rem;
+    font-weight: 600 !important;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+    white-space: normal;
+    box-shadow: none;
+  }
+
+  .location {
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
+  }
+
+  h6 {
+    margin-left: 0 !important;
+    line-height: 1.45;
+  }
+
+  h6.title {
+    font-size: 1rem;
+    font-weight: 600 !important;
+
+    a {
+      color: var(--global-text-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  // second/third lines: institution, area
+  h6:not(.title) {
+    color: var(--global-text-color-light);
+  }
+
+  ul.items {
+    margin: 0.4rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 0.92rem;
+
+    li {
+      margin-bottom: 0.2rem;
+    }
+
+    .item {
+      color: var(--global-text-color);
+    }
+  }
+
+  // Basics table
+  .table-cv-map td {
+    padding: 0.35rem 0.75rem 0.35rem 0 !important;
+    border: 0;
+    vertical-align: top;
+  }
+
+  .table-cv-map td:first-child b {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  // Skills / interests / languages groups
+  .list-groups {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .list-group-category {
+    font-weight: 600;
+    color: var(--global-theme-color);
+  }
+
+  .list-group-name b {
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 576px) {
+  .cv .list-group-flush > .list-group-item > .row > div:first-child {
+    flex-basis: 5.25rem;
+    max-width: 5.25rem;
+    padding-right: 0.75rem;
+  }
+}
+
+// Quiet "era" break inside a timeline (- divider: "text" in _data/research.yml)
+.sink .sink-timeline li.sink-divider,
+.cv .list-group-item.cv-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.6rem 0 0.9rem;
+  padding: 0;
+
+  span {
+    order: 2;
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    color: var(--global-text-color-light);
+    opacity: 0.75;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1 1 auto;
+    border-top: 1px dashed var(--global-divider-color);
+  }
+
+  &::before {
+    order: 1;
+    flex: 0 0 7.75rem;
+  }
+
+  &::after {
+    order: 3;
+  }
+}

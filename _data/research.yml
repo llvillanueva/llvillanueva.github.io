@@ -1,0 +1,80 @@
+# Research activities shown on the .sink. page (_pages/repositories.html).
+# Add a new entry at the top; newest first.
+# Fields: title (required), date, location, role, url (all optional).
+# Posters have their own list in _data/posters.yml.
+# A '- divider: "text"' line adds a quiet break with a label in the timeline.
+# To add another section (e.g. "Talks" or "Fieldwork"), copy the whole block.
+# A section with no items is hidden.
+
+- section: Conferences, workshops & schools
+  items:
+    - title: Polar Climate Space Hackathon (PISCO & SnowPI)
+      date: Aug 2026
+      location: Åh Stiftsgård, Ljungskile, Sweden
+      role: Participant
+      url: https://climate.esa.int/en/observations-and-modelling/PISCO/news-events/news/the-polar-climate-space-hackathon-save-the-date-and-pre-registration/
+    - title: "Course: Data Analysis and Model Evaluation Tools in Environmental and Climate Science"
+      date: Jun 2026
+      location: Stockholm University, Kristineberg Marine Research Station, Sweden
+      url: https://www.su.se/english/divisions/department-of-environmental-science/education/courses-and-programmes/data-analysis-and-model-evaluation-tools-in-environmental-and-climate-science
+    - title: "Swedish Climate Symposium 2026: Climate Research – Science, Society, Actions"
+      date: May 2026
+      location: Lund University, Sweden
+      role: Poster presenter
+      url: https://www.lu.se/evenemang/swedish-climate-symposium-2026
+    - title: Saroma Sea Ice School 2026
+      date: Feb–Mar 2026
+      location: Hokkaido, Japan (BEPSII, CIce2Clouds, CATCH & Hokkaido University)
+      role: Poster presenter
+      url: https://www.bepsii.org/outreach/bepsii-catch-sea-ice-school-2026
+    - title: "6th Summer School on Theory, Mechanisms and Hierarchical Modelling of Climate Dynamics: Artificial Intelligence and Climate Modelling"
+      date: May 2025
+      location: ICTP, Trieste, Italy
+      role: Poster presenter
+      url: https://indico.ictp.it/event/10832
+    - title: 2nd ARTofMELT Open Science Workshop
+      date: Apr 2025
+      location: Stockholm University, Sweden
+      role: Presenter
+    - title: "ECMWF training course: Parametrization of subgrid physical processes"
+      date: Mar 2025
+      location: ECMWF, Reading, UK
+      url: https://events.ecmwf.int/event/435/overview
+    - title: "ICTP School and Workshop on Polar Climates: Theoretical, Observational and Modelling Advances"
+      date: Jul 2024
+      location: ICTP, Trieste, Italy
+      url: https://indico.ictp.it/event/10498/
+    - title: "5th Summer School on Theory, Mechanisms and Hierarchical Modelling of Climate Dynamics: Convection and Clouds"
+      date: Jul 2024
+      location: ICTP, Trieste, Italy
+      url: https://indico.ictp.it/event/10490/
+    - divider: "Sept 2023 · my stint in atmospheric science begins ↑"
+    - title: Joint ICTP-IUGG Workshop on Data Assimilation and Inverse Problems in Geophysical Sciences
+      date: Oct 2021
+      location: Virtual
+      role: Participant
+      url: https://indico.ictp.it/event/9643/
+    - title: 39th Samahang Pisika ng Pilipinas Physics Conference
+      date: Oct 2021
+      location: Virtual
+      role: Poster presenter
+      url: https://spp-online.org/spp2021/
+    - title: "Prediction and Variability of Air-Sea Interactions: the South Asian Monsoon (ICERM)"
+      date: Aug 2021
+      location: Virtual
+      role: Attendee
+      url: https://icerm.brown.edu/topical_workshops/tw-21-pvsam/
+    - title: 38th Samahang Pisika ng Pilipinas Physics Conference
+      date: Oct 2020
+      location: Virtual
+      role: Short presentation
+      url: https://spp-online.org/spp2020/
+    - title: 37th Samahang Pisika ng Pilipinas Physics Conference
+      date: Jun 2019
+      location: Tagbilaran City, Bohol, Philippines
+      role: Poster presenter
+      url: https://spp-online.org/spp2019/
+    - title: Teaching Effectiveness Course
+      date: Jan 2019
+      location: University of the Philippines Diliman
+      role: Participant

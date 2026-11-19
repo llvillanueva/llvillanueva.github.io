@@ -33,6 +33,26 @@
         <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
         <!-- Title -->
         <div class="title">{{entry.title}}</div>
+        <!-- Status tags, e.g. labels={Preprint, Open access} in papers.bib -->
+        {%- if entry.labels %}
+        <div class="pub-labels">
+          {%- assign pub_labels = entry.labels | split: "," -%}
+          {%- for label in pub_labels -%}
+          {%- assign label_name = label | strip -%}
+          {%- assign label_slug = label_name | slugify -%}
+          <span class="pub-label pub-label-{{ label_slug }}">
+            {%- case label_slug -%}
+              {%- when "preprint" -%}<i class="fas fa-file-alt"></i>
+              {%- when "open-access" -%}<i class="fas fa-lock-open"></i>
+              {%- when "peer-reviewed" -%}<i class="fas fa-check"></i>
+              {%- when "under-review" -%}<i class="fas fa-hourglass-half"></i>
+              {%- when "open-source-code" -%}<i class="fas fa-code"></i>
+              {%- when "conference-paper" -%}<i class="fas fa-users"></i>
+            {%- endcase -%}
+            {{ label_name }}</span>
+          {%- endfor %}
+        </div>
+        {%- endif %}
         <!-- Author -->
         <div class="author">
         {% assign author_array_size = entry.author_array | size %}

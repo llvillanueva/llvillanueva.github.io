@@ -1,0 +1,14 @@
+# Posters shown on the .sink. page. Newest first.
+# 1. Put the PDF in assets/pdf/
+# 2. Make a preview image (first page as JPG) in assets/img/posters/
+#    On a Mac:  sips -s format jpeg -Z 1000 assets/pdf/POSTER.pdf --out assets/img/posters/POSTER.jpg
+# Fields: title, authors, event, location, date, pdf, image, url (event page, optional)
+
+- title: Characteristics of wintertime multilayer clouds (MLC) at the Arctic gateway
+  authors: Lloyd Villanueva, Luisa Ickes, Hans Chen
+  event: Swedish Climate Symposium 2026
+  location: Lund, Sweden
+  date: May 2026
+  url: https://www.lu.se/evenemang/swedish-climate-symposium-2026
+  pdf: assets/pdf/Villanueva_SCS2026_poster.pdf
+  image: assets/img/posters/Villanueva_SCS2026_poster.jpg

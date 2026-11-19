@@ -88,6 +88,39 @@ layout: default
           {% endcase %}
           </div>
         </div>
+        {% if data[0] == "projects" %}
+        <!-- Conferences, workshops & schools: same list as the .sink. page (_data/research.yml) -->
+        {% for group in site.data.research %}
+        {% if group.items and group.items.size > 0 %}
+        <a class="anchor" id="{{ group.section | slugify }}"></a>
+        <div class="card mt-3 p-3">
+          <h3 class="card-title font-weight-medium">{{ group.section }}</h3>
+          <div>
+            <ul class="card-text font-weight-light list-group list-group-flush">
+              {% for item in group.items %}
+              {% if item.divider %}
+              <li class="list-group-item cv-divider"><span>{{ item.divider }}</span></li>
+              {% continue %}
+              {% endif %}
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col-md-2 text-center">
+                    <span class="badge">{{ item.date }}</span>
+                  </div>
+                  <div class="col-md-10">
+                    <h6 class="title font-weight-bold">{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h6>
+                    {% if item.location %}<h6 style="font-size: 0.95rem;">{{ item.location }}</h6>{% endif %}
+                    {% if item.role %}<h6 style="font-size: 0.95rem; font-style: italic;">{{ item.role }}</h6>{% endif %}
+                  </div>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
       {% endfor %}
       </div>
   </article>

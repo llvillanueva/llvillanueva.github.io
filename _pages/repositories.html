@@ -1,0 +1,119 @@
+---
+layout: page
+permalink: /repositories/
+title: .sink.
+headt: .sink.
+description: "Research and code: papers, conferences, schools, and repositories."
+nav: true
+nav_order: 2
+---
+<!--
+  Edit content here:
+    publications             -> _bibliography/papers.bib
+    posters                  -> _data/posters.yml
+    conferences, schools ... -> _data/research.yml
+    repositories             -> _data/repositories.yml
+  Styles: _sass/_sink.scss
+-->
+{%- assign research_groups = site.data.research | where_exp: "g", "g.items.size > 0" -%}
+{%- assign lang_colors = "Python:#3572A5,Jupyter Notebook:#DA5B0B,Fortran:#4d41b1,Julia:#a270ba,MATLAB:#e16737,R:#198CE7,C:#555555,C++:#f34b7d,Shell:#89e051" | split: "," -%}
+
+<div class="sink">
+
+<ul class="sink-nav">
+  <li><a href="#publications">Publications</a></li>
+  {%- if site.data.posters.size > 0 %}
+  <li><a href="#posters">Posters</a></li>
+  {%- endif %}
+  {%- for group in research_groups %}
+  <li><a href="#{{ group.section | slugify }}">{{ group.section }}</a></li>
+  {%- endfor %}
+  <li><a href="#repositories">Repositories</a></li>
+</ul>
+
+<section class="sink-section" id="research">
+  <h2 class="sink-heading">Research</h2>
+
+  <h3 class="sink-sub" id="publications">Publications</h3>
+  <div class="publications">
+    {% bibliography -f {{ site.scholar.bibliography }} %}
+  </div>
+
+  {%- if site.data.posters.size > 0 %}
+  <h3 class="sink-sub" id="posters">Posters</h3>
+  <div class="sink-posters">
+    {%- for p in site.data.posters %}
+    <article class="sink-poster">
+      <a class="sink-poster-img" href="{{ p.pdf | relative_url }}" target="_blank" rel="noopener">
+        <img src="{{ p.image | relative_url }}" alt="Poster: {{ p.title }}" loading="lazy">
+      </a>
+      <div class="sink-poster-body">
+        <div class="sink-poster-title">{{ p.title }}</div>
+        {%- if p.authors %}<div class="sink-poster-authors">{{ p.authors | replace: "Lloyd Villanueva", "<u>Lloyd Villanueva</u>" }}</div>{% endif %}
+        <div class="sink-poster-event">
+          {%- if p.url -%}<a href="{{ p.url }}">{{ p.event }}</a>{%- else -%}{{ p.event }}{%- endif -%}
+          {%- if p.location %} · {{ p.location }}{% endif -%}
+          {%- if p.date %} · {{ p.date }}{% endif -%}
+        </div>
+        <a class="sink-poster-btn" href="{{ p.pdf | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View poster (PDF)</a>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+
+  {%- for group in research_groups %}
+  <h3 class="sink-sub" id="{{ group.section | slugify }}">{{ group.section }}</h3>
+  <ol class="sink-timeline">
+    {%- for item in group.items %}
+    {%- if item.divider %}
+    <li class="sink-divider"><span>{{ item.divider }}</span></li>
+    {%- continue %}
+    {%- endif %}
+    <li>
+      <span class="sink-date">{{ item.date }}</span>
+      <div class="sink-body">
+        <div class="sink-title">
+          {%- if item.url -%}<a href="{{ item.url }}">{{ item.title }}</a>{%- else -%}{{ item.title }}{%- endif -%}
+        </div>
+        {%- if item.location or item.role %}
+        <div class="sink-meta">
+          {{- item.location -}}
+          {%- if item.location and item.role %} · {% endif -%}
+          {%- if item.role -%}<span class="sink-role">{{ item.role }}</span>{%- endif -%}
+        </div>
+        {%- endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+  {%- endfor %}
+</section>
+
+<section class="sink-section" id="repositories">
+  <h2 class="sink-heading">Repositories</h2>
+
+  <div class="sink-repos">
+    {%- for r in site.data.repositories.github_repos %}
+    {%- assign name = r.repo | split: "/" | last %}
+    {%- assign color = "" %}
+    {%- for pair in lang_colors %}
+      {%- assign kv = pair | split: ":" %}
+      {%- if kv[0] == r.language %}{% assign color = kv[1] %}{% endif %}
+    {%- endfor %}
+    <a class="sink-card" href="https://github.com/{{ r.repo }}">
+      <div class="sink-card-title"><i class="fas fa-book"></i>{{ name | replace: "_", " " | replace: "-", " " }}</div>
+      <div class="sink-card-desc">{{ r.description }}</div>
+      {%- if r.language %}
+      <div class="sink-card-lang"{% if color != "" %} style="--lang-color: {{ color }}"{% endif %}>{{ r.language }}</div>
+      {%- endif %}
+    </a>
+    {%- endfor %}
+  </div>
+
+  {%- for user in site.data.repositories.github_users %}
+  <a class="sink-more" href="https://github.com/{{ user }}">All repositories on GitHub <i class="fas fa-arrow-right"></i></a>
+  {%- endfor %}
+</section>
+
+</div>

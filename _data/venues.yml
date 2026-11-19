@@ -1,6 +1,12 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Badge shown next to each publication (set with abbr={...} in _bibliography/papers.bib)
+"EGUsphere":
+  url: https://egusphere.copernicus.org/
+  color: "#1f6f8b"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"JMP":
+  url: https://pubs.aip.org/aip/jmp
+  color: "#8a2c3b"
+
+"SPP":
+  url: https://proceedings.spp-online.org/
+  color: "#3d7a3a"

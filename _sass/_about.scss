@@ -1,0 +1,171 @@
+/*******************************************************************************
+ * Styles for the .about. homepage (_pages/about.md, _layouts/about.html)
+ ******************************************************************************/
+
+.about {
+  .post-header {
+    margin-bottom: 1.75rem;
+
+    .desc {
+      font-size: 1.05rem;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  // Profile photo + location lines
+  .profile {
+    img {
+      border-radius: 10px !important;
+    }
+
+    .more-info {
+      margin-top: 0.85rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--global-text-color-light);
+
+      p {
+        display: block;
+      }
+    }
+  }
+
+  .clearfix > p {
+    line-height: 1.75;
+  }
+
+  .about-lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0.9rem;
+  }
+
+  // Research-interest chips
+  .about-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 1.4rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--global-theme-color);
+      border: 1px solid var(--global-theme-color);
+    }
+  }
+
+  // CV / Research / .noise. buttons
+  .about-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.75rem 0 0;
+  }
+
+  .about-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--global-text-color);
+    transition: border-color 0.15s, color 0.15s;
+
+    i {
+      color: var(--global-theme-color);
+    }
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+
+  // Landscape photo
+  .about-photo {
+    clear: both;
+    margin: 2.5rem 0 0;
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 8;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    figcaption {
+      margin-top: 0.55rem;
+      font-size: 0.82rem;
+      text-align: right;
+      color: var(--global-text-color-light);
+
+      strong {
+        color: var(--global-text-color-light);
+        font-weight: 600;
+      }
+    }
+  }
+
+  // "news" heading: same accent label style as the .sink. page
+  .about-heading {
+    margin: 3rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--global-theme-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    a {
+      color: var(--global-theme-color);
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .news {
+    th {
+      padding-left: 0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--global-text-color-light);
+      white-space: nowrap;
+    }
+
+    td {
+      line-height: 1.6;
+    }
+  }
+
+  // Smaller, calmer social icons
+  .social {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--global-divider-color);
+
+    .contact-icons {
+      font-size: 1.9rem;
+
+      a {
+        margin: 0 0.45rem;
+      }
+    }
+
+    .contact-note {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--global-text-color-light);
+    }
+  }
+}
