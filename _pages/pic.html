@@ -1,0 +1,38 @@
+---
+layout: page
+permalink: /albedo/
+title: .albedo.
+headt: .albedo.
+description: "Reflected light, captured. Photos, just because."
+nav: true
+nav_order: 4
+---
+<!--
+  .albedo. photo gallery
+    Add photos:  drop .jpg / .jpeg / .png / .webp files into assets/img/pic/
+                 (newest files show first; they arrange themselves)
+    Captions:    optional, in _data/pics.yml  ->  filename.jpg: "Caption text"
+    Tip:         resize big camera photos to ~2000 px on the long side first
+                 (Mac: sips -Z 2000 photo.jpg) so the page loads fast.
+  Styles: _sass/_pic.scss
+-->
+{%- assign exts = ".jpg,.jpeg,.png,.webp,.JPG,.JPEG,.PNG,.WEBP" | split: "," -%}
+{%- assign pics = site.static_files | where_exp: "f", "f.path contains '/assets/img/pic/'" | sort: "modified_time" | reverse -%}
+
+<div class="pic-grid">
+  {%- assign count = 0 -%}
+  {%- for f in pics -%}
+    {%- unless exts contains f.extname -%}{%- continue -%}{%- endunless -%}
+    {%- if f.name contains "-480." or f.name contains "-800." or f.name contains "-1400." -%}{%- continue -%}{%- endif -%}
+    {%- assign caption = site.data.pics[f.name] -%}
+    {%- assign count = count | plus: 1 %}
+  <figure class="pic-item">
+    <img src="{{ f.path | relative_url }}" alt="{{ caption | default: f.basename | replace: '-', ' ' | replace: '_', ' ' }}" loading="lazy" data-zoomable>
+    {%- if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}
+  </figure>
+  {%- endfor %}
+</div>
+
+{%- if count == 0 %}
+<p class="pic-empty">No photos yet.</p>
+{%- endif %}

@@ -1,0 +1,365 @@
+---
+layout: page
+permalink: /current/
+title: .current.
+headt: .current.
+description: "Weather right now in my two homes, Manila and Gothenburg."
+nav: true
+nav_order: 3
+---
+<!--
+  .current. weather page
+    Live data (loaded in the visitor's browser, no keys needed):
+      Gothenburg  now: SMHI observations, station Göteborg A (71420)
+                  forecast: SMHI point forecast (snow1g)
+      Manila      now + forecast: Open-Meteo (ECMWF/GFS blend); PAGASA has no open API,
+                  so PAGASA products are shown as their live charts and satellite loop below.
+  Styles: _sass/_current.scss
+-->
+<div class="sink current">
+
+<ul class="sink-nav">
+  <li><a href="#now">Now</a></li>
+  <li><a href="#windy">Windy</a></li>
+  <li><a href="#pagasa">PAGASA</a></li>
+  <li><a href="#smhi">SMHI</a></li>
+  <li><a href="#links">Links</a></li>
+</ul>
+
+<section class="sink-section" id="now">
+  <h2 class="sink-heading">Now</h2>
+
+  <div class="wx-cities">
+    <!-- Manila -->
+    <article class="wx-card" id="wx-manila">
+      <header class="wx-head">
+        <div>
+          <h3 class="wx-city">Manila</h3>
+          <div class="wx-sub">Philippines · <span class="wx-clock" data-tz="Asia/Manila">--:--</span></div>
+        </div>
+        <i class="wx-icon fas fa-cloud" aria-hidden="true"></i>
+      </header>
+      <div class="wx-now">
+        <span class="wx-temp">--°</span>
+        <span class="wx-desc">Loading…</span>
+      </div>
+      <dl class="wx-stats"></dl>
+      <ol class="wx-days"></ol>
+      <p class="wx-source">Model data: <a href="https://open-meteo.com/">Open-Meteo</a> · Official forecasts: <a href="https://www.pagasa.dost.gov.ph/weather">PAGASA</a></p>
+    </article>
+
+    <!-- Gothenburg -->
+    <article class="wx-card" id="wx-gothenburg">
+      <header class="wx-head">
+        <div>
+          <h3 class="wx-city">Gothenburg</h3>
+          <div class="wx-sub">Sweden · <span class="wx-clock" data-tz="Europe/Stockholm">--:--</span></div>
+        </div>
+        <i class="wx-icon fas fa-cloud" aria-hidden="true"></i>
+      </header>
+      <div class="wx-now">
+        <span class="wx-temp">--°</span>
+        <span class="wx-desc">Loading…</span>
+      </div>
+      <dl class="wx-stats"></dl>
+      <ol class="wx-days"></ol>
+      <p class="wx-source">Observations: <a href="https://www.smhi.se/data/meteorologi/ladda-ner-meteorologiska-observationer">SMHI Göteborg A</a> · Forecast: <a href="https://www.smhi.se/vader/prognoser-och-varningar/vaderprognos/q/G%C3%B6teborg/2711537">SMHI</a></p>
+    </article>
+  </div>
+</section>
+
+<section class="sink-section" id="windy">
+  <h2 class="sink-heading">Windy</h2>
+  <div class="wx-tabs" role="tablist">
+    <button class="wx-tab active" data-lat="14.6" data-lon="120.98" data-zoom="5">Philippines</button>
+    <button class="wx-tab" data-lat="57.7" data-lon="11.97" data-zoom="5">Scandinavia</button>
+  </div>
+  <div class="wx-tabs wx-layers" role="tablist">
+    <button class="wx-layer active" data-overlay="wind">Wind</button>
+    <button class="wx-layer" data-overlay="rain">Rain</button>
+    <button class="wx-layer" data-overlay="clouds">Clouds</button>
+    <button class="wx-layer" data-overlay="temp">Temperature</button>
+    <button class="wx-layer" data-overlay="pressure">Pressure</button>
+  </div>
+  <div class="wx-frame">
+    <iframe id="windy-frame" title="Windy weather map" loading="lazy"
+      src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=m%2Fs&zoom=5&overlay=wind&product=ecmwf&level=surface&lat=14.6&lon=120.98&detailLat=14.6&detailLon=120.98&marker=true&message=true"></iframe>
+  </div>
+</section>
+
+<section class="sink-section" id="pagasa">
+  <h2 class="sink-heading">PAGASA · Philippines</h2>
+  <div class="wx-figs">
+    <figure class="wx-fig wx-fig-wide">
+      <a href="https://src.meteopilipinas.gov.ph/repo/himawari/24hour/irsml/1irsml.gif" target="_blank" rel="noopener">
+        <img src="https://src.meteopilipinas.gov.ph/repo/himawari/24hour/irsml/1irsml.gif" alt="PAGASA Himawari-8 infrared satellite loop over the Philippines" loading="lazy">
+      </a>
+      <figcaption>Himawari-8 infrared, last 24 h (loop)</figcaption>
+    </figure>
+    <figure class="wx-fig">
+      <a href="https://pubfiles.pagasa.dost.gov.ph/tamss/weather/chart.png" target="_blank" rel="noopener">
+        <img src="https://pubfiles.pagasa.dost.gov.ph/tamss/weather/chart.png" alt="PAGASA mean sea level pressure analysis" loading="lazy">
+      </a>
+      <figcaption>Mean sea level pressure analysis</figcaption>
+    </figure>
+    <figure class="wx-fig">
+      <a href="https://pubfiles.pagasa.dost.gov.ph/tamss/weather/we98.png" target="_blank" rel="noopener">
+        <img src="https://pubfiles.pagasa.dost.gov.ph/tamss/weather/we98.png" alt="PAGASA streamline analysis" loading="lazy">
+      </a>
+      <figcaption>Streamline analysis</figcaption>
+    </figure>
+  </div>
+  <p class="wx-note">Images update automatically from <a href="https://www.pagasa.dost.gov.ph/weather">PAGASA</a>. Click to open full size.</p>
+</section>
+
+<section class="sink-section" id="smhi">
+  <h2 class="sink-heading">SMHI · Sweden</h2>
+  <div class="wx-figs wx-figs-smhi">
+    <figure class="wx-fig">
+      <a href="https://www.smhi.se/vader/radar-och-satellit/radar-blixt" target="_blank" rel="noopener">
+        <img src="https://opendata-download-radar.smhi.se/api/version/latest/area/sweden/product/comp/latest.png" alt="SMHI latest radar composite over Sweden" loading="lazy">
+      </a>
+      <figcaption>Latest radar composite</figcaption>
+    </figure>
+    <div class="wx-obs">
+      <h3 class="sink-sub">Göteborg A · last 24 h</h3>
+      <div class="wx-spark" id="wx-spark"><span class="wx-note">Loading observations…</span></div>
+      <p class="wx-note">Hourly air temperature from SMHI station Göteborg A (71420).</p>
+    </div>
+  </div>
+</section>
+
+<section class="sink-section" id="links">
+  <h2 class="sink-heading">Links</h2>
+  <div class="wx-links">
+    <div>
+      <h3 class="sink-sub">Philippines</h3>
+      <ul>
+        <li><a href="https://www.pagasa.dost.gov.ph/weather">PAGASA daily forecast</a></li>
+        <li><a href="https://www.pagasa.dost.gov.ph/weather/weather-outlook-selected-philippine-cities">PAGASA city outlooks</a></li>
+        <li><a href="https://www.pagasa.dost.gov.ph/weather/weather-advisory">PAGASA weather advisories</a></li>
+        <li><a href="https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin">PAGASA tropical cyclone bulletins</a></li>
+        <li><a href="https://panahon.observatory.ph/">Panahon (Manila Observatory)</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sink-sub">Sweden</h3>
+      <ul>
+        <li><a href="https://www.smhi.se/vader/prognoser-och-varningar/vaderprognos/q/G%C3%B6teborg/2711537">SMHI forecast, Göteborg</a></li>
+        <li><a href="https://www.smhi.se/en/weather/warnings-and-forecasts">SMHI warnings</a></li>
+        <li><a href="https://www.smhi.se/vader/radar-och-satellit/radar-blixt">SMHI radar &amp; lightning</a></li>
+        <li><a href="https://www.yr.no/en/forecast/daily-table/2-2711537">Yr (MET Norway), Gothenburg</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sink-sub">Satellite &amp; models</h3>
+      <ul>
+        <li><a href="https://rammb-slider.cira.colostate.edu/?sat=himawari">Himawari (RAMMB SLIDER)</a></li>
+        <li><a href="https://view.eumetsat.int/">EUMETView (Meteosat)</a></li>
+        <li><a href="https://charts.ecmwf.int/">ECMWF charts</a></li>
+        <li><a href="https://earth.nullschool.net/">earth.nullschool</a></li>
+        <li><a href="https://zoom.earth/">Zoom Earth</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sink-sub">Soundings, cyclones &amp; more</h3>
+      <ul>
+        <li><a href="https://weather.uwyo.edu/upperair/">Radiosondes (U. Wyoming)</a></li>
+        <li><a href="https://www.metoc.navy.mil/jtwc/jtwc.html">JTWC tropical cyclones</a></li>
+        <li><a href="https://www.jma.go.jp/bosai/map.html">JMA weather map</a></li>
+        <li><a href="https://atmosphere.copernicus.eu/charts/packages/cams/">CAMS aerosols &amp; air quality</a></li>
+        <li><a href="https://www.lightningmaps.org/">Lightning (Blitzortung)</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function () {
+  // ── helpers ────────────────────────────────────────────────────────────
+  const DIRS = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"];
+  const dirName = d => (d == null || isNaN(d)) ? "" : DIRS[Math.round(d / 22.5) % 16];
+  const r1 = v => (v == null || isNaN(v)) ? "–" : (Math.round(v * 10) / 10).toString();
+  const r0 = v => (v == null || isNaN(v)) ? "–" : Math.round(v).toString();
+
+  // Weather → [description, Font Awesome icon class]
+  // (class names are written out in full so the CSS optimiser keeps them)
+  function fromWMO(c) {
+    if (c === 0) return ["Clear", "fa-sun"];
+    if (c === 1 || c === 2) return ["Partly cloudy", "fa-cloud-sun"];
+    if (c === 3) return ["Overcast", "fa-cloud"];
+    if (c === 45 || c === 48) return ["Fog", "fa-smog"];
+    if (c >= 51 && c <= 57) return ["Drizzle", "fa-cloud-rain"];
+    if (c >= 61 && c <= 65) return [c === 65 ? "Heavy rain" : "Rain", c === 65 ? "fa-cloud-showers-heavy" : "fa-cloud-rain"];
+    if (c === 66 || c === 67) return ["Freezing rain", "fa-cloud-rain"];
+    if (c >= 71 && c <= 77) return ["Snow", "fa-snowflake"];
+    if (c >= 80 && c <= 82) return [c === 82 ? "Heavy showers" : "Showers", "fa-cloud-showers-heavy"];
+    if (c === 85 || c === 86) return ["Snow showers", "fa-snowflake"];
+    if (c >= 95) return ["Thunderstorm", "fa-cloud-bolt"];
+    return ["–", "fa-cloud"];
+  }
+  function fromSMHI(s) {
+    const t = {1:"Clear",2:"Nearly clear",3:"Variable cloudiness",4:"Halfclear",5:"Cloudy",6:"Overcast",7:"Fog",
+      8:"Light rain showers",9:"Rain showers",10:"Heavy rain showers",11:"Thunderstorm",12:"Light sleet showers",
+      13:"Sleet showers",14:"Heavy sleet showers",15:"Light snow showers",16:"Snow showers",17:"Heavy snow showers",
+      18:"Light rain",19:"Rain",20:"Heavy rain",21:"Thunder",22:"Light sleet",23:"Sleet",24:"Heavy sleet",
+      25:"Light snow",26:"Snow",27:"Heavy snow"}[s] || "–";
+    let i = "fa-cloud";
+    if (s === 1) i = "fa-sun"; else if (s <= 4) i = "fa-cloud-sun"; else if (s === 7) i = "fa-smog";
+    else if (s === 11 || s === 21) i = "fa-cloud-bolt";
+    else if ((s >= 15 && s <= 17) || s >= 25) i = "fa-snowflake";
+    else if (s === 10 || s === 20) i = "fa-cloud-showers-heavy";
+    else if (s >= 8) i = "fa-cloud-rain";
+    return [t, i];
+  }
+  function dayName(dateStr, tz) {
+    const d = new Date(dateStr + "T12:00:00Z");
+    return new Intl.DateTimeFormat("en-GB", { weekday: "short", timeZone: "UTC" }).format(d);
+  }
+  function setIcon(card, cls) {
+    const el = card.querySelector(".wx-icon");
+    el.className = "wx-icon fas " + cls;
+  }
+  function stats(card, rows) {
+    card.querySelector(".wx-stats").innerHTML = rows
+      .map(([k, v, icon]) => `<div><dt><i class="fas ${icon}"></i> ${k}</dt><dd>${v}</dd></div>`).join("");
+  }
+  function days(card, list) {
+    card.querySelector(".wx-days").innerHTML = list.map(d => `
+      <li><span class="wx-day">${d.name}</span>
+          <i class="fas ${d.icon}" title="${d.desc}"></i>
+          <span class="wx-range"><b>${r0(d.max)}°</b> / ${r0(d.min)}°</span>
+          <span class="wx-precip">${d.precip > 0.05 ? r1(d.precip) + " mm" : ""}</span></li>`).join("");
+  }
+  function fail(card, msg) { card.querySelector(".wx-desc").textContent = msg || "Data unavailable right now"; }
+
+  // ── live clocks ────────────────────────────────────────────────────────
+  function tick() {
+    document.querySelectorAll(".wx-clock").forEach(el => {
+      el.textContent = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", weekday: "short", timeZone: el.dataset.tz }).format(new Date());
+    });
+  }
+  tick(); setInterval(tick, 30000);
+
+  // ── Manila: Open-Meteo ─────────────────────────────────────────────────
+  (async function manila() {
+    const card = document.getElementById("wx-manila");
+    try {
+      const url = "https://api.open-meteo.com/v1/forecast?latitude=14.5995&longitude=120.9842" +
+        "&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,cloud_cover,pressure_msl,wind_speed_10m,wind_direction_10m,wind_gusts_10m" +
+        "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum&wind_speed_unit=ms&timezone=Asia%2FManila&forecast_days=5";
+      const d = await (await fetch(url)).json();
+      const c = d.current, [desc, icon] = fromWMO(c.weather_code);
+      card.querySelector(".wx-temp").textContent = r1(c.temperature_2m) + "°";
+      card.querySelector(".wx-desc").textContent = desc + " · feels like " + r0(c.apparent_temperature) + "°";
+      setIcon(card, icon);
+      stats(card, [
+        ["Wind", `${r1(c.wind_speed_10m)} m/s ${dirName(c.wind_direction_10m)} <small>(gust ${r1(c.wind_gusts_10m)})</small>`, "fa-wind"],
+        ["Humidity", r0(c.relative_humidity_2m) + "%", "fa-droplet"],
+        ["Pressure", r0(c.pressure_msl) + " hPa", "fa-gauge"],
+        ["Cloud", r0(c.cloud_cover) + "%", "fa-cloud"],
+      ]);
+      days(card, d.daily.time.map((t, i) => {
+        const [ds, ic] = fromWMO(d.daily.weather_code[i]);
+        return { name: i === 0 ? "Today" : dayName(t), icon: ic, desc: ds,
+          max: d.daily.temperature_2m_max[i], min: d.daily.temperature_2m_min[i], precip: d.daily.precipitation_sum[i] };
+      }));
+    } catch (e) { fail(card); }
+  })();
+
+  // ── Gothenburg: SMHI observations + SMHI forecast ──────────────────────
+  (async function gothenburg() {
+    const card = document.getElementById("wx-gothenburg");
+    const OBS = p => `https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/${p}/station/71420/period/latest-hour/data.json`;
+    const latest = j => (j && j.value && j.value.length) ? parseFloat(j.value[j.value.length - 1].value) : NaN;
+    const get = u => fetch(u).then(r => r.ok ? r.json() : null).catch(() => null);
+    try {
+      const [t, ws, wd, rh, p, fc] = await Promise.all([
+        get(OBS(1)), get(OBS(4)), get(OBS(3)), get(OBS(6)), get(OBS(9)),
+        get("https://opendata-download-metfcst.smhi.se/api/category/snow1g/version/1/geotype/point/lon/11.9797/lat/57.7166/data.json")
+      ]);
+      const ts = fc ? fc.timeSeries : [];
+      const first = ts.length ? ts[0].data : {};
+      let temp = latest(t); if (isNaN(temp)) temp = first.air_temperature;
+      const [desc, icon] = fromSMHI(first.symbol_code);
+      card.querySelector(".wx-temp").textContent = r1(temp) + "°";
+      card.querySelector(".wx-desc").textContent = desc;
+      setIcon(card, icon);
+      const wsv = isNaN(latest(ws)) ? first.wind_speed : latest(ws);
+      const wdv = isNaN(latest(wd)) ? first.wind_from_direction : latest(wd);
+      stats(card, [
+        ["Wind", `${r1(wsv)} m/s ${dirName(wdv)} <small>(gust ${r1(first.wind_speed_of_gust)})</small>`, "fa-wind"],
+        ["Humidity", r0(isNaN(latest(rh)) ? first.relative_humidity : latest(rh)) + "%", "fa-droplet"],
+        ["Pressure", r0(isNaN(latest(p)) ? first.air_pressure_at_mean_sea_level : latest(p)) + " hPa", "fa-gauge"],
+        ["Cloud", first.cloud_area_fraction != null && first.cloud_area_fraction <= 8 ? r0(first.cloud_area_fraction) + "/8 oktas" : "–", "fa-cloud"],
+      ]);
+      // daily summary in local time
+      const fmt = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Stockholm", year: "numeric", month: "2-digit", day: "2-digit" });
+      const hourFmt = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Stockholm", hour: "2-digit", hour12: false });
+      const byDay = {};
+      ts.forEach(s => {
+        const day = fmt.format(new Date(s.time)), h = parseInt(hourFmt.format(new Date(s.time)), 10);
+        const o = byDay[day] || (byDay[day] = { min: Infinity, max: -Infinity, precip: 0, sym: null, symDist: 99 });
+        const v = s.data.air_temperature;
+        if (v != null) { o.min = Math.min(o.min, v); o.max = Math.max(o.max, v); }
+        o.precip += s.data.precipitation_amount_mean || 0;
+        if (Math.abs(h - 13) < o.symDist) { o.symDist = Math.abs(h - 13); o.sym = s.data.symbol_code; }
+      });
+      days(card, Object.keys(byDay).sort().slice(0, 5).map((k, i) => {
+        const o = byDay[k], [ds, ic] = fromSMHI(o.sym);
+        return { name: i === 0 ? "Today" : dayName(k), icon: ic, desc: ds, max: o.max, min: o.min, precip: o.precip };
+      }));
+    } catch (e) { fail(card); }
+  })();
+
+  // ── Göteborg A: last 24 h temperature sparkline ───────────────────────
+  (async function spark() {
+    const box = document.getElementById("wx-spark");
+    try {
+      const j = await (await fetch("https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/71420/period/latest-day/data.json")).json();
+      const pts = j.value.map(v => [v.date, parseFloat(v.value)]).filter(p => !isNaN(p[1]));
+      if (pts.length < 2) throw 0;
+      const W = 560, H = 150, P = 28;
+      const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+      const x0 = Math.min(...xs), x1 = Math.max(...xs);
+      let y0 = Math.floor(Math.min(...ys)) - 1, y1 = Math.ceil(Math.max(...ys)) + 1;
+      const X = x => P + (x - x0) / (x1 - x0) * (W - 2 * P);
+      const Y = y => H - P + 6 - (y - y0) / (y1 - y0) * (H - 2 * P);
+      const path = pts.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
+      const area = path + ` L${X(x1).toFixed(1)} ${H - P + 6} L${X(x0).toFixed(1)} ${H - P + 6} Z`;
+      const hf = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Stockholm" });
+      const last = pts[pts.length - 1];
+      const ticks = [0, 0.5, 1].map(f => x0 + f * (x1 - x0));
+      box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Air temperature at Göteborg A over the last 24 hours">
+        <line x1="${P}" x2="${W - P}" y1="${H - P + 6}" y2="${H - P + 6}" class="wx-axis"/>
+        <path d="${area}" class="wx-area"/>
+        <path d="${path}" class="wx-line"/>
+        <circle cx="${X(last[0])}" cy="${Y(last[1])}" r="4" class="wx-dot"/>
+        <text x="${X(last[0]) - 6}" y="${Y(last[1]) - 10}" text-anchor="end" class="wx-lbl wx-lbl-strong">${r1(last[1])}°C</text>
+        <text x="${P}" y="${Y(y1) + 4}" class="wx-lbl">${y1}°</text>
+        <text x="${P}" y="${Y(y0) - 4}" class="wx-lbl">${y0}°</text>
+        ${ticks.map(tk => `<text x="${X(tk)}" y="${H - 4}" text-anchor="middle" class="wx-lbl">${hf.format(new Date(tk))}</text>`).join("")}
+      </svg>`;
+    } catch (e) { box.innerHTML = '<span class="wx-note">Observations unavailable right now.</span>'; }
+  })();
+
+  // ── Windy: region + layer switches ────────────────────────────────────
+  const frame = document.getElementById("windy-frame");
+  let region = document.querySelector(".wx-tab.active").dataset, overlay = "wind";
+  function updateWindy() {
+    frame.src = "https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=m%2Fs" +
+      `&zoom=${region.zoom}&overlay=${overlay}&product=ecmwf&level=surface&lat=${region.lat}&lon=${region.lon}` +
+      `&detailLat=${region.lat}&detailLon=${region.lon}&marker=true&message=true`;
+  }
+  document.querySelectorAll(".wx-tab").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(".wx-tab").forEach(x => x.classList.remove("active"));
+    b.classList.add("active"); region = b.dataset; updateWindy();
+  }));
+  document.querySelectorAll(".wx-layer").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(".wx-layer").forEach(x => x.classList.remove("active"));
+    b.classList.add("active"); overlay = b.dataset.overlay; updateWindy();
+  }));
+})();
+</script>

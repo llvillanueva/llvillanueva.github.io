@@ -1,0 +1,3 @@
+# Optional captions for photos on the .albedo. page.
+# Use the exact file name from assets/img/pic/. Photos without a caption show none.
+barobo-surigao-del-sur.jpg: "Barobo, Surigao del Sur"

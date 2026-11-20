@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Shared look for .about. / .cv. / .sink. / .noise.
+ * Shared look for .source. / .cv. / .sink. / .current. / .albedo. / .noise.
  *   - page title:      light, accent-coloured ".name." + muted description
  *   - section labels:  small uppercase accent text with an accent underline
  *   - timelines:       muted date | dot on a line | entry
@@ -36,7 +36,7 @@
     }
   }
 
-  // Section names look like the .sink. / .about. labels
+  // Section names look like the .sink. / .source. labels
   .card-title {
     margin: 0 0 1.25rem;
     padding-bottom: 0.6rem;

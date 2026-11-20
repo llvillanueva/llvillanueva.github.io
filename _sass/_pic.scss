@@ -1,0 +1,50 @@
+/*******************************************************************************
+ * Styles for the .albedo. gallery (_pages/pic.html)
+ ******************************************************************************/
+
+.pic-grid {
+  column-count: 3;
+  column-gap: 0.9rem;
+}
+
+.pic-item {
+  break-inside: avoid;
+  margin: 0 0 0.9rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: zoom-in;
+    transition: opacity 0.2s, transform 0.2s;
+
+    &:hover {
+      opacity: 0.92;
+    }
+  }
+
+  figcaption {
+    margin-top: 0.35rem;
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+.pic-empty {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--global-text-color-light);
+}
+
+@media (max-width: 768px) {
+  .pic-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .pic-grid {
+    column-count: 1;
+  }
+}

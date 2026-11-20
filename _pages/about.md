@@ -1,6 +1,6 @@
 ---
 layout: about
-title: .about.
+title: .source.
 permalink: /
 subtitle: PhD student at <a href='https://www.chalmers.se/en/'>Chalmers University of Technology</a>
 profile:
