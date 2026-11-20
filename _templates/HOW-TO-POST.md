@@ -32,6 +32,7 @@ Each tag also gets its own page, e.g. /blog/tag/freediving/.
 Not ready yet? Keep the file in `_drafts/` (no date in the file name). It won't be published.
 
 ## Show a post in the homepage news
+(Full news guide: `_templates/HOW-TO-POST-NEWS.md`.)
 Add a file to `_news/`, e.g. `_news/2026-12-01-new-post.md`:
 
     ---
